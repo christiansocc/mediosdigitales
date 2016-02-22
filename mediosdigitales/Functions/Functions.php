@@ -7,7 +7,7 @@
  */
 
 
-require($_SERVER['DOCUMENT_ROOT'].'/Libraries/TwitterAPIExchange.php');
+require_once('../Libraries/TwitterAPIExchange.php');
 
 function get_twitter_followers($account){
 
@@ -67,7 +67,7 @@ function fbLikeCount($id,$appid,$appsecret){
  */
 
 
-function followsinstagram ($user_id,$access_token){
+function foll_ins ($user_id,$access_token){
 
     $followers = 'https://api.instagram.com/v1/users/'.$user_id.'/?access_token='.$access_token;
     $curl_init = curl_init ();
